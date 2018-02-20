@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{460A0472-F072-4FD9-BB4D-0C4494EBCF50}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MySommelier</RootNamespace>
+    <AssemblyName>MySommelier</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44343</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
+    <WebProject_DirectoryAccessLevelKey>0</WebProject_DirectoryAccessLevelKey>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Practices.ObjectBuilder.dll.3.1.0\lib\2.0\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dist\favicon.ico" />
+    <Content Include="dist\index.html" />
+    <Content Include="dist\inline.bundle.js" />
+    <Content Include="dist\main.bundle.js" />
+    <Content Include="dist\polyfills.bundle.js" />
+    <Content Include="dist\styles.bundle.js" />
+    <Content Include="dist\vendor.bundle.js" />
+    <Content Include="Global.asax" />
+    <Content Include="karma.conf.js" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="index.html" />
+    <Content Include=".angular-cli.json" />
+    <Content Include=".editorconfig" />
+    <Content Include="e2e\tsconfig.e2e.json" />
+    <Content Include="package.json" />
+    <Content Include="webpack.config.js" />
+    <Content Include="dist\inline.bundle.js.map" />
+    <Content Include="dist\main.bundle.js.map" />
+    <Content Include="dist\polyfills.bundle.js.map" />
+    <Content Include="dist\styles.bundle.js.map" />
+    <Content Include="dist\vendor.bundle.js.map" />
+    <Content Include="Data\Countries.json" />
+    <Content Include="Data\usa-states.json" />
+    <Content Include="Data\countries\afghanistan.json" />
+    <Content Include="Data\countries\albania.json" />
+    <Content Include="Data\countries\algeria.json" />
+    <Content Include="Data\countries\andorra.json" />
+    <Content Include="Data\countries\angola.json" />
+    <Content Include="Data\countries\antigua-and-barbuda.json" />
+    <Content Include="Data\countries\argentina.json" />
+    <Content Include="Data\countries\armenia.json" />
+    <Content Include="Data\countries\australia.json" />
+    <Content Include="Data\countries\austria.json" />
+    <Content Include="Data\countries\azerbaijan.json" />
+    <Content Include="Data\countries\bahamas.json" />
+    <Content Include="Data\countries\bahrain.json" />
+    <Content Include="Data\countries\bangladesh.json" />
+    <Content Include="Data\countries\barbados.json" />
+    <Content Include="Data\countries\belarus.json" />
+    <Content Include="Data\countries\belgium.json" />
+    <Content Include="Data\countries\belize.json" />
+    <Content Include="Data\countries\benin.json" />
+    <Content Include="Data\countries\bhutan.json" />
+    <Content Include="Data\countries\bolivia.json" />
+    <Content Include="Data\countries\bosnia-and-herzegovina.json" />
+    <Content Include="Data\countries\botswana.json" />
+    <Content Include="Data\countries\brazil.json" />
+    <Content Include="Data\countries\brunei-darussalam.json" />
+    <Content Include="Data\countries\bulgaria.json" />
+    <Content Include="Data\countries\burkina-faso.json" />
+    <Content Include="Data\countries\burundi.json" />
+    <Content Include="Data\countries\cambodia.json" />
+    <Content Include="Data\countries\cameroon.json" />
+    <Content Include="Data\countries\canada.json" />
+    <Content Include="Data\countries\cape-verde.json" />
+    <Content Include="Data\countries\central-african-republic.json" />
+    <Content Include="Data\countries\chad.json" />
+    <Content Include="Data\countries\chile.json" />
+    <Content Include="Data\countries\china.json" />
+    <Content Include="Data\countries\colombia.json" />
+    <Content Include="Data\countries\comoros.json" />
+    <Content Include="Data\countries\congo-the-democratic-republic-of-the.json" />
+    <Content Include="Data\countries\congo.json" />
+    <Content Include="Data\countries\costa-rica.json" />
+    <Content Include="Data\countries\cote-d-ivoire-republic-of.json" />
+    <Content Include="Data\countries\croatia.json" />
+    <Content Include="Data\countries\cuba.json" />
+    <Content Include="Data\countries\cyprus.json" />
+    <Content Include="Data\countries\czech-republic.json" />
+    <Content Include="Data\countries\denmark.json" />
+    <Content Include="Data\countries\djibouti.json" />
+    <Content Include="Data\countries\dominica.json" />
+    <Content Include="Data\countries\dominican-republic.json" />
+    <Content Include="Data\countries\ecuador.json" />
+    <Content Include="Data\countries\egypt.json" />
+    <Content Include="Data\countries\el-salvador.json" />
+    <Content Include="Data\countries\equatorial-guinea.json" />
+    <Content Include="Data\countries\eritrea.json" />
+    <Content Include="Data\countries\estonia.json" />
+    <Content Include="Data\countries\ethiopia.json" />
+    <Content Include="Data\countries\fiji.json" />
+    <Content Include="Data\countries\finland.json" />
+    <Content Include="Data\countries\france.json" />
+    <Content Include="Data\countries\gabon.json" />
+    <Content Include="Data\countries\gambia.json" />
+    <Content Include="Data\countries\georgia.json" />
+    <Content Include="Data\countries\germany.json" />
+    <Content Include="Data\countries\ghana.json" />
+    <Content Include="Data\countries\greece.json" />
+    <Content Include="Data\countries\greenland.json" />
+    <Content Include="Data\countries\grenada.json" />
+    <Content Include="Data\countries\guatemala.json" />
+    <Content Include="Data\countries\guinea-bissau.json" />
+    <Content Include="Data\countries\guinea.json" />
+    <Content Include="Data\countries\guyana.json" />
+    <Content Include="Data\countries\haiti.json" />
+    <Content Include="Data\countries\honduras.json" />
+    <Content Include="Data\countries\hong-kong.json" />
+    <Content Include="Data\countries\hungary.json" />
+    <Content Include="Data\countries\iceland.json" />
+    <Content Include="Data\countries\india.json" />
+    <Content Include="Data\countries\indonesia.json" />
+    <Content Include="Data\countries\iran-islamic-republic-of.json" />
+    <Content Include="Data\countries\iraq.json" />
+    <Content Include="Data\countries\ireland.json" />
+    <Content Include="Data\countries\israel.json" />
+    <Content Include="Data\countries\italy.json" />
+    <Content Include="Data\countries\jamaica.json" />
+    <Content Include="Data\countries\japan.json" />
+    <Content Include="Data\countries\jordan.json" />
+    <Content Include="Data\countries\kazakhstan.json" />
+    <Content Include="Data\countries\kenya.json" />
+    <Content Include="Data\countries\kiribati.json" />
+    <Content Include="Data\countries\korea-democratic-people-s-republic-of.json" />
+    <Content Include="Data\countries\korea-republic-of.json" />
+    <Content Include="Data\countries\kuwait.json" />
+    <Content Include="Data\countries\kyrgyzstan.json" />
+    <Content Include="Data\countries\lao-people-s-democratic-republic.json" />
+    <Content Include="Data\countries\latvia.json" />
+    <Content Include="Data\countries\lebanon.json" />
+    <Content Include="Data\countries\lesotho.json" />
+    <Content Include="Data\countries\liberia.json" />
+    <Content Include="Data\countries\libyan-arab-jamahiriya.json" />
+    <Content Include="Data\countries\liechtenstein.json" />
+    <Content Include="Data\countries\lithuania.json" />
+    <Content Include="Data\countries\luxembourg.json" />
+    <Content Include="Data\countries\macedonia-the-former-yugoslav-republic-of.json" />
+    <Content Include="Data\countries\madagascar.json" />
+    <Content Include="Data\countries\malawi.json" />
+    <Content Include="Data\countries\malaysia.json" />
+    <Content Include="Data\countries\maldives.json" />
+    <Content Include="Data\countries\mali.json" />
+    <Content Include="Data\countries\malta.json" />
+    <Content Include="Data\countries\marshall-islands.json" />
+    <Content Include="Data\countries\mauritania.json" />
+    <Content Include="Data\countries\mauritius.json" />
+    <Content Include="Data\countries\mexico.json" />
+    <Content Include="Data\countries\micronesia-federated-states-of.json" />
+    <Content Include="Data\countries\moldova-republic-of.json" />
+    <Content Include="Data\countries\monaco.json" />
+    <Content Include="Data\countries\mongolia.json" />
+    <Content Include="Data\countries\montenegro.json" />
+    <Content Include="Data\countries\morocco.json" />
+    <Content Include="Data\countries\mozambique.json" />
+    <Content Include="Data\countries\myanmar.json" />
+    <Content Include="Data\countries\namibia.json" />
+    <Content Include="Data\countries\nauru.json" />
+    <Content Include="Data\countries\nepal.json" />
+    <Content Include="Data\countries\netherlands.json" />
+    <Content Include="Data\countries\new-zealand.json" />
+    <Content Include="Data\countries\nicaragua.json" />
+    <Content Include="Data\countries\niger.json" />
+    <Content Include="Data\countries\nigeria.json" />
+    <Content Include="Data\countries\norway.json" />
+    <Content Include="Data\countries\oman.json" />
+    <Content Include="Data\countries\pakistan.json" />
+    <Content Include="Data\countries\palau.json" />
+    <Content Include="Data\countries\palestinian-territory-occupied.json" />
+    <Content Include="Data\countries\panama.json" />
+    <Content Include="Data\countries\papua-new-guinea.json" />
+    <Content Include="Data\countries\paraguay.json" />
+    <Content Include="Data\countries\peru.json" />
+    <Content Include="Data\countries\philippines.json" />
+    <Content Include="Data\countries\poland.json" />
+    <Content Include="Data\countries\portugal.json" />
+    <Content Include="Data\countries\qatar.json" />
+    <Content Include="Data\countries\romania.json" />
+    <Content Include="Data\countries\russian-federation.json" />
+    <Content Include="Data\countries\rwanda.json" />
+    <Content Include="Data\countries\saint-helena-ascension-and-tristan-da-cunha.json" />
+    <Content Include="Data\countries\saint-kitts-and-nevis.json" />
+    <Content Include="Data\countries\saint-lucia.json" />
+    <Content Include="Data\countries\saint-vincent-and-the-grenadines.json" />
+    <Content Include="Data\countries\samoa.json" />
+    <Content Include="Data\countries\san-marino.json" />
+    <Content Include="Data\countries\sao-tome-and-principe.json" />
+    <Content Include="Data\countries\saudi-arabia.json" />
+    <Content Include="Data\countries\senegal.json" />
+    <Content Include="Data\countries\serbia.json" />
+    <Content Include="Data\countries\seychelles.json" />
+    <Content Include="Data\countries\sierra-leone.json" />
+    <Content Include="Data\countries\singapore.json" />
+    <Content Include="Data\countries\slovakia.json" />
+    <Content Include="Data\countries\slovenia.json" />
+    <Content Include="Data\countries\solomon-islands.json" />
+    <Content Include="Data\countries\somalia.json" />
+    <Content Include="Data\countries\south-africa.json" />
+    <Content Include="Data\countries\south-sudan.json" />
+    <Content Include="Data\countries\spain.json" />
+    <Content Include="Data\countries\sri-lanka.json" />
+    <Content Include="Data\countries\sudan.json" />
+    <Content Include="Data\countries\suriname.json" />
+    <Content Include="Data\countries\swaziland.json" />
+    <Content Include="Data\countries\sweden.json" />
+    <Content Include="Data\countries\switzerland.json" />
+    <Content Include="Data\countries\syrian-arab-republic.json" />
+    <Content Include="Data\countries\taiwan-province-of-china.json" />
+    <Content Include="Data\countries\tajikistan.json" />
+    <Content Include="Data\countries\tanzania-united-republic-of.json" />
+    <Content Include="Data\countries\thailand.json" />
+    <Content Include="Data\countries\timor-leste.json" />
+    <Content Include="Data\countries\togo.json" />
+    <Content Include="Data\countries\tonga.json" />
+    <Content Include="Data\countries\trinidad-and-tobago.json" />
+    <Content Include="Data\countries\tunisia.json" />
+    <Content Include="Data\countries\turkey.json" />
+    <Content Include="Data\countries\turkmenistan.json" />
+    <Content Include="Data\countries\tuvalu.json" />
+    <Content Include="Data\countries\uganda.json" />
+    <Content Include="Data\countries\ukraine.json" />
+    <Content Include="Data\countries\united-arab-emirates.json" />
+    <Content Include="Data\countries\united-kingdom.json" />
+    <Content Include="Data\countries\united-states-minor-outlying-islands.json" />
+    <Content Include="Data\countries\united-states.json" />
+    <Content Include="Data\countries\uruguay.json" />
+    <Content Include="Data\countries\uzbekistan.json" />
+    <Content Include="Data\countries\vanuatu.json" />
+    <Content Include="Data\countries\venezuela.json" />
+    <Content Include="Data\countries\viet-nam.json" />
+    <Content Include="Data\countries\yemen.json" />
+    <Content Include="Data\countries\zambia.json" />
+    <Content Include="Data\countries\zimbabwe.json" />
+    <None Include="Properties\PublishProfiles\hxp-cx-assessment - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\hxp-cx-assessment - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\workfrontreports - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\workfrontreports - Web Deploy.pubxml" />
+    <Content Include="README.md" />
+    <Content Include="src\assets\.gitkeep" />
+    <Content Include="src\tsconfig.app.json" />
+    <Content Include="src\tsconfig.spec.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tslint.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="protractor.conf.js" />
+    <Content Include="src\app\app.component.css" />
+    <Content Include="src\app\app.component.html" />
+    <Content Include="src\favicon.ico" />
+    <Content Include="src\index.html" />
+    <Content Include="src\styles.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\WineController.cs" />
+    <Compile Include="DataAccess\Country.cs" />
+    <Compile Include="DataAccess\Region.cs" />
+    <Compile Include="DataAccess\SommelierDataContext.cs" />
+    <Compile Include="DataAccess\Grape.cs" />
+    <Compile Include="DataAccess\Wine.cs" />
+    <Compile Include="DataAccess\Winery.cs" />
+    <Compile Include="ExceptionFilter.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711242117588_Create.cs" />
+    <Compile Include="Migrations\201711242117588_Create.Designer.cs">
+      <DependentUpon>201711242117588_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="e2e\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="e2e\app.po.ts" />
+    <TypeScriptCompile Include="src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="src\environments\environment.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+    <TypeScriptCompile Include="src\test.ts" />
+    <TypeScriptCompile Include="src\typings.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201711242117588_Create.resx">
+      <DependentUpon>201711242117588_Create.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64989</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64989/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
